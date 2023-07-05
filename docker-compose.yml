@@ -9,6 +9,10 @@ services:
     ports:
       - "2181:2181"
 
+  kcat:
+    image: edenhill/kcat:1.7.1
+    entrypoint: ["/bin/sh", "-c", "sleep 365d"]
+
   kafka:
     image: confluentinc/cp-kafka:7.4.0
     container_name: kafka
