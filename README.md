@@ -4,23 +4,30 @@
 Image:
 https://www.cloudkarafka.com/blog/part1-kafka-for-beginners-what-is-apache-kafka.html
 
-[ ] Brokers
-[ ] Topics
-[ ] Partitions
-[ ] Cluster (multiple brokers)
-[ ] Zookeeper
+[X] Brokers
+[X] Topics
+[X] Partitions
+[X] Cluster (multiple brokers)
+[X] Zookeeper
 
 ## Run kafka in docker and use the CLI producer/consumer
-[ ] Start a kafka broker (with zookeeper)
+[X] Start a kafka broker (with zookeeper)
 docker run -d -p 9092:9092 -p 9094:9094 -p 2182:2182 -e ALLOW_PLAINTEXT_LISTENER=yes -e KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:9094 -e KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092,EXTERNAL://localhost:9094 -e KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT,PLAINTEXT:PLAINTEXT -e KAFKA_ZOOKEEPER_USER=zk -e KAFKA_ZOOKEEPER_PASSWORD=zk --rm bitnami/kafka:latest
 
-[ ] Connect, list topics, create topic
-[ ] Connect to kafka from external host
-[ ] Produce messages in topics
-[ ] Consume messages in topics
+[X] Connect, list topics, create topic
+[X] Connect to kafka from external host
+[X] Produce messages in topics
+[X] Consume messages in topics
+
+----
+
 
 ## Add Kafka To a Leinigen Project
 [ ] clojar [clj-kafka "0.3.4"]
+[ ] [org.clojure/clojure "1.10.3"]
+[ ] [cheshire "5.11.0"]
+[ ] [org.apache.kafka/kafka-clients "2.8.0"]
+[ ] [com.appsflyer/ketu "1.0.0"]
 [ ] create a simple string producer
 [ ] create a simple string consumer
 [ ] create a JSON producer/consumer
